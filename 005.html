@@ -1,0 +1,37 @@
+<html>
+<head>
+    <style>
+    body {
+        margin: 0;
+    }
+    .inner {
+        background-color: black;
+        height: 100px;
+        width: 100px;
+        margin: 50px;
+        display: inline-block;
+    }
+    .left {
+        margin-right: 0;
+    }
+    .outer {
+        height: 200px;
+        width: 350px;
+    }
+    #red {
+        background-color: red;
+    }
+    #blue {
+        background-color: blue;
+    }
+    </style>
+</head>
+<body>
+    <div id="red" class="outer">
+        <div class="inner left"></div><!-- html collapses newline into single space --><div class="inner"></div>
+    </div>
+    <div id="blue" class="outer">
+        <div class="inner left"><!-- html collapses newline into single space --></div><div class="inner"></div>
+    </div>
+</body>
+</html>
